@@ -20,10 +20,10 @@ def createMatrix(fileList):
         df[0][i+1]=nameList[i]
         df[i+1][0]=nameList[i]
     return df
-def mash(df,dirF):
+def mash(df,dirF,outputFile):
     size=len(df[0])-1
     dirF=os.path.expanduser(dirF)
-    mashOutFile=open("mashResults.txt","w")
+    mashOutFile=open(outputFile,"w")
     for row in range(1,size):
         for col in range(row+1,size):          
             rowName=os.path.join(dirF+"/"+df[row][0]) #cell in first column
@@ -31,26 +31,32 @@ def mash(df,dirF):
             command="{} dist {} {}".format("./mash",colName,rowName) 
             subprocess.call(command,shell=True,stdout=mashOutFile)  
     mashOutFile.close()
-def editOutputFile(outFile):  
+def editOutputFile(outFile):
+    editOutputFile=os.path.basename(outFile).split()[0]+"editted"+".txt"  
+    
     with open(outFile,"r") as fh:
-        with open("MashResults_editted.txt","w") as newFH:
+        with open(editOutputFile,"w") as newFH:
             newFH.write("{}\t\t{}\t{}\t{}\t{}\n".format("genome1","genome2","Mash-distance","P-value","Matching-hashes"))
             for l in fh:
                 cols=l.strip().split()
                 newLine="{}\t{}\t{}\t{}\t{}\n".format(os.path.basename(cols[0]),os.path.basename(cols[1]),cols[2],cols[3],cols[4])
                 newFH.write(newLine)
-    os.remove("mashResults.txt")
+    os.remove(outFile) 
 def main():
     parser = argparse.ArgumentParser(description='FunctionalAnnotation')
     parser.add_argument('-ma',"--mash",required=False,action="store_true",help = 'Clustering by Mash')
     parser.add_argument('-v',"--vsearch" ,action="store_true",required=False,help = 'Clustering by VSEARCH')
     parser.add_argument('-d',"--dir" ,type=str,required=True,help = 'directory')
+    parser.add_argument('-o',"--output", action="store",help='otuput for storing mash results')
     args=parser.parse_args()
-    if args.mash:         
-        dirFolder=args.dir
-        file_list=dirlist(dirFolder)  
+    if args.mash:   
+        if args.dir == None:
+            raise SystemExit ("there is no specified input directory to do MASH. Exit program")      
+        file_list=dirlist(args.dir) 
         df=createMatrix(file_list)
-        mash(df,dirFolder)
-        editOutputFile("mashResults.txt")
+        if args.output == None:
+            raise SystemExit ("there is no specified output filename. Exit program")
+        mash(df,args.dir,args.output)  #calculating pairwide genome distance
+        editOutputFile(args.output)
 if __name__ == '__main__':
 	main()

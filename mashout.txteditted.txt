@@ -1,0 +1,11 @@
+genome1		genome2	Mash-distance	P-value	Matching-hashes
+1033_scaffolds.faa	1020_scaffolds.faa	0	9.61582e-28	4/4
+1058_scaffolds.faa	1020_scaffolds.faa	0	9.47767e-28	4/4
+1042_scaffolds.faa	1020_scaffolds.faa	0	8.27316e-28	4/4
+1032_scaffolds.faa	1020_scaffolds.faa	0	9.51479e-28	4/4
+1058_scaffolds.faa	1033_scaffolds.faa	0	9.62538e-28	4/4
+1042_scaffolds.faa	1033_scaffolds.faa	0	8.39776e-28	4/4
+1032_scaffolds.faa	1033_scaffolds.faa	0	9.66324e-28	4/4
+1042_scaffolds.faa	1058_scaffolds.faa	0	8.28109e-28	4/4
+1032_scaffolds.faa	1058_scaffolds.faa	0	9.52423e-28	4/4
+1032_scaffolds.faa	1042_scaffolds.faa	0	8.31245e-28	4/4
