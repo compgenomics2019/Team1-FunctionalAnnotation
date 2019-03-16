@@ -41,7 +41,7 @@ def editOutputFile(outFile):
                 cols=l.strip().split()
                 newLine="{}\t{}\t{}\t{}\t{}\n".format(os.path.basename(cols[0]),os.path.basename(cols[1]),cols[2],cols[3],cols[4])
                 newFH.write(newLine)
-    os.remove(outFile) 
+    #os.remove(outFile) 
 def main():
     parser = argparse.ArgumentParser(description='FunctionalAnnotation')
     parser.add_argument('-ma',"--mash",required=False,action="store_true",help = 'Clustering by Mash')
