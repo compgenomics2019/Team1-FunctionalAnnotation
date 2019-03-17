@@ -5,7 +5,7 @@ import argparse
 import subprocess
 import pandas as pd
 import numpy
-
+import fileinput
 def dirlist(path):
     file_list = []
     path = os.path.expanduser(path)  #get absolute path if user provides relative path
@@ -33,7 +33,6 @@ def mash(df,dirF,outputFile):
     mashOutFile.close()
 def editOutputFile(outFile):
     editOutputFile=os.path.basename(outFile).split()[0]+"editted"+".txt"  
-    
     with open(outFile,"r") as fh:
         with open(editOutputFile,"w") as newFH:
             newFH.write("{}\t\t{}\t{}\t{}\t{}\n".format("genome1","genome2","Mash-distance","P-value","Matching-hashes"))
@@ -41,6 +40,7 @@ def editOutputFile(outFile):
                 cols=l.strip().split()
                 newLine="{}\t{}\t{}\t{}\t{}\n".format(os.path.basename(cols[0]),os.path.basename(cols[1]),cols[2],cols[3],cols[4])
                 newFH.write(newLine)
+    
     #os.remove(outFile) 
 def main():
     parser = argparse.ArgumentParser(description='FunctionalAnnotation')
