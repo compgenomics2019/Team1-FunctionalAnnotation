@@ -3,13 +3,14 @@ This pipeline is designed by functional annotation team of group 1, to fully ann
 ## Function Annotation Guidline
 ### Requirements
 **1.** Python3  <br />
-**2.** perl for TMHMM2.0 tool. The installed tool has perl path /usr/bin/perl. <br /> If the perl path is different from your local computer, please change it to /usr/bin/perl or make a symbolic link. 
+**2.** perl for TMHMM2.0 tool. The installed tool has perl path /usr/bin/perl. <br /> 
+If the perl path is different from your local computer, please change it to /usr/bin/perl or make a symbolic link.  <br />
 **3.** These tools are needed to be included in the current working directory with the FA_pipeline_final.py script, as in this git repo:
 * tmhmm-2.0c/bin/tmhmm
 * pilercr1.06/pilercr
 * signalp-5.0/bin/signalp
 * ncbi-blast-2.8.1+/bin containing blasts, blasts, makeblastdb
-* eggnog/eggnog-mapper/emapper.py  <br />
+* eggnog/eggnog-mapper/emapper.py 
 **4.** These databases are also needed to be present in the current working directory, to run annotation for DOOR2 and VFDB:
   * operonDB.fasta
   * VFDBdb.fasta  <br />
