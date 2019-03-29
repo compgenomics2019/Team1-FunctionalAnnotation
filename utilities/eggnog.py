@@ -19,7 +19,7 @@ subprocess.call(["mkdir", outFolder])
 				"-d", "bact",
 				"--cpu", "04",
 				"--usemem"]) """
-subprocess.call(["python2", "eggnog/eggnog-mapper/emapper.py",
+subprocess.call(["python2", "eggnog-mapper/emapper.py",
 				"-i", "cluster_CDHIT/clusterFile.txt", 
 				"-o", os.path.join(outFolder,"eggnogOutput"),
 				"-m", "hmmer",
