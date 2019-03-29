@@ -1,5 +1,5 @@
 # Team1 - Functional Annotation pipeline
-This pipeline is designed by functional annotation team of group 1, to fully annotate biological functions of genes/proteins predicted from the results of gene prediction team. 
+	This pipeline is designed by functional annotation team of group 1, to fully annotate biological functions of genes/proteins predicted from the results of gene prediction team. 
 ## Function Annotation Guidline
 ### Requirements
 **1.** Python3  <br />
