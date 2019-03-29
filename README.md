@@ -23,6 +23,8 @@ If the perl path is different from your local computer, please change it to /usr
 Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git 
 cd Team1-FunctionalAnnotation 
 ./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files>  -oa<output name for annotatio results> -og< output name for gff files> -om <output name for final results> 
+OR
+python3 FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files>  -oa<output name for annotatio results> -og< output name for gff files> -om <output name for final results>
 ~~~~
 #### Arguments
 `-p `: directory that contains all the .faa files with known gene or RNA sequences from gene prediction <br />
