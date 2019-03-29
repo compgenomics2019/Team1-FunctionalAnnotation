@@ -11,7 +11,7 @@ This pipeline is designed by functional annotation team of group 1, to fully ann
  * ncbi-blast-2.8.1+/bin containing blasts, blasts, makeblastdb
 
 ### Quick start
-`-p `: directory that contains all the .faa files with known gene or RNA sequences from gene prediction \newline
-`-a `: directory that contains all the .faa files with known protein sequences from gene prediction \newline
-`-n`:a directory that contains all the .fasta files from assembly genome
+`-p `: directory that contains all the .faa files with known gene or RNA sequences from gene prediction <br />
+`-a `: directory that contains all the .faa files with known protein sequences from gene prediction <br />
+`-n`:a directory that contains all the .fasta files from assembly genome <br />
 `-o`: name of folder that contains 50 off merged file 
