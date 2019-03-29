@@ -29,11 +29,11 @@ cd Team1-FunctionalAnnotation
 `-n`:a directory that contains all the .fasta files from assembly genome <br />
 `-o`: name of folder that contains 50 off merged file 
 ### Output Description
-In order to the final output specified by -o argument, there will be another two intermediate output generated after running the pipeline: <br />
-  * output_annot: folder containing 50 output files from each annotation tool 
-   * gff_all : folder containing 50 gff output from each annotation tool
+In order to the final output specified by `-o` argument, there will be another two intermediate folders generated after running the pipeline: <br />
+  * `output_annot`: folder containing 50 output files from each annotation tool 
+   * `gff_all` : folder containing 50 gff output from each annotation tool
 When blast path is executed, it will also generate a database folder:
-  * blast_operon_db: database for DOOR2
-  * blast_vfdb_db: database for vfdb
+  * `blast_operon_db`: database for DOOR2
+  * `blast_vfdb_db`: database for vfdb
 
 
