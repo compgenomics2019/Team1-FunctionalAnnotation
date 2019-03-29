@@ -2,18 +2,18 @@
 This pipeline is designed by functional annotation team of group 1, to fully annotate biological functions of genes/proteins predicted from the results of gene prediction team. 
 ## Function Annotation Guidline
 ### Requirements
-1*. Python3
-2*. perl for TMHMM2.0 tool. The installed tool has perl path /usr/bin/perl. <br /> If the perl path is different from your local computer, please change it to /usr/bin/perl or make a symbolic link. 
-3*. These tools are needed to be included in the current working directory with the FA_pipeline_final.py script, as in this git repo:
+**1** Python3
+**2** perl for TMHMM2.0 tool. The installed tool has perl path /usr/bin/perl. <br /> If the perl path is different from your local computer, please change it to /usr/bin/perl or make a symbolic link. 
+**3**. These tools are needed to be included in the current working directory with the FA_pipeline_final.py script, as in this git repo:
   * tmhmm-2.0c/bin/tmhmm
   * pilercr1.06/pilercr
   * signalp-5.0/bin/signalp
   * ncbi-blast-2.8.1+/bin containing blasts, blasts, makeblastdb
   * eggnog/eggnog-mapper/emapper.py
-4*. These databases are also needed to be present in the current working directory, to run annotation for DOOR2 and VFDB:
+**4**. These databases are also needed to be present in the current working directory, to run annotation for DOOR2 and VFDB:
   * operonDB.fasta
   * VFDBdb.fasta
-5*. Utilities folder, containing scripts to run with the FA_pipeline_final.py script  <br /> 
+**5**. Utilities folder, containing scripts to run with the FA_pipeline_final.py script  <br /> 
 ### Quick start
 ~~~~
 Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git <br />
