@@ -31,7 +31,7 @@ cd Team1-FunctionalAnnotation
 `-og`: name of folder that contains converted gff results <br />
 `-om`: name of folder that contains 50 off merged file 
 ### Output Description
-In order to the final output specified by `-om` argument, there will be another two intermediate folders ,specified by `-oa` and `-og` arguments. So there will be a total of 3 output folders after executing the pipeline command.
+In order to the final output specified by `-om` argument, there will be another two intermediate folders ,specified by `-oa` and `-og` arguments. So there will be a total of 3 output folders after executing the pipeline command.<br />
 When blast path is executed, it will also generate a database folder:
   * `blast_operon_db`: database for DOOR2
   * `blast_vfdb_db`: database for vfdb
