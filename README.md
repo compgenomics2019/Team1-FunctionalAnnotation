@@ -15,9 +15,9 @@ This pipeline is designed by functional annotation team of group 1, to fully ann
  * VFDBdb.fasta
 
 ### Quick start
-`Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git <br />
-cd Team1-FunctionalAnnotation
-./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files> -o <output name for final results> <br />`
+`Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git ` <br />
+`cd Team1-FunctionalAnnotation` <br />
+`./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files> -o <output name for final results> <br />` <br />
 #### Arguments
 `-p `: directory that contains all the .faa files with known gene or RNA sequences from gene prediction <br />
 `-a `: directory that contains all the .faa files with known protein sequences from gene prediction <br />
