@@ -10,7 +10,7 @@ If the perl path is different from your local computer, please change it to /usr
   * pilercr1.06/pilercr
   * signalp-5.0/bin/signalp
   * ncbi-blast-2.8.1+/bin containing blasts, blasts, makeblastdb
-  * eggnog/eggnog-mapper/emapper.py 
+  * eggnog-mapper folder containing emapper.py. 
   
 **4.** These databases are also needed to be present in the current working directory, to run annotation for DOOR2 and VFDB:
   * operonDB.fasta
@@ -20,6 +20,7 @@ If the perl path is different from your local computer, please change it to /usr
 **6.** card-data folder: a database to run `card` annotation 
 ### Quick start
 ~~~~
+
 Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git 
 cd Team1-FunctionalAnnotation 
 ./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files>  -oa<output name for annotatio results> -og< output name for gff files> -om <output name for final results> 
