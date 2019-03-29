@@ -27,8 +27,8 @@ cd Team1-FunctionalAnnotation
 `-p `: directory that contains all the .faa files with known gene or RNA sequences from gene prediction <br />
 `-a `: directory that contains all the .faa files with known protein sequences from gene prediction <br />
 `-n`:a directory that contains all the .fasta files from assembly genome <br />
-`-oa`: name of folder that contains annotation results
-`-og`: name of folder that contains converted gff results 
+`-oa`: name of folder that contains annotation results<br />
+`-og`: name of folder that contains converted gff results <br />
 `-om`: name of folder that contains 50 off merged file 
 ### Output Description
 In order to the final output specified by `-om` argument, there will be another two intermediate folders ,specified by `-oa` and `-og` arguments. So there will be a total of 3 output folders after executing the pipeline command.
