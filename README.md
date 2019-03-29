@@ -16,10 +16,10 @@ If the perl path is different from your local computer, please change it to /usr
   * operonDB.fasta
   * VFDBdb.fasta 
   
-**5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script  <br /> 
+**5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script, and `card-data`: database to run `card` annotation <br /> 
 ### Quick start
 ~~~~
-Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git <br />
+Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git 
 cd Team1-FunctionalAnnotation 
 ./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files> -o <output name for final results> 
 ~~~~
