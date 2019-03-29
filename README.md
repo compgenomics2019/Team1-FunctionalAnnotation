@@ -2,7 +2,7 @@
 This pipeline is designed by functional annotation team of group 1, to fully annotate biological functions of genes/proteins predicted from the results of gene prediction team. 
 ## Function Annotation Guidline
 ### Requirements
-**1.** Python3, python2 to run EggNOG annotation <br />
+**1.** python3 and python2 to run EggNOG annotation <br />
 **2.** perl for TMHMM2.0 tool. The installed tool has perl path /usr/bin/perl. <br /> 
 If the perl path is different from your local computer, please change it to /usr/bin/perl or make a symbolic link.  <br />
 **3.** These tools are needed to be included in the current working directory with the FA_pipeline_final.py script, as in this git repo:
