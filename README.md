@@ -16,22 +16,22 @@ If the perl path is different from your local computer, please change it to /usr
   * operonDB.fasta
   * VFDBdb.fasta 
   
-**5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script, and `card-data`: database to run `card` annotation <br /> 
+**5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script, and `card-data`, database to run `card` annotation <br /> 
 ### Quick start
 ~~~~
 Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git 
 cd Team1-FunctionalAnnotation 
-./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files> -o <output name for final results> 
+./FA_pipeline_final.py -p <path for .faa files> -n <path for .fna files> -a <path for .fasta files>  -oa<output name for annotatio results> -og< output name for gff files> -om <output name for final results> 
 ~~~~
 #### Arguments
 `-p `: directory that contains all the .faa files with known gene or RNA sequences from gene prediction <br />
 `-a `: directory that contains all the .faa files with known protein sequences from gene prediction <br />
 `-n`:a directory that contains all the .fasta files from assembly genome <br />
-`-o`: name of folder that contains 50 off merged file 
+`-oa`: name of folder that contains annotation results
+`-og`: name of folder that contains converted gff results 
+`-om`: name of folder that contains 50 off merged file 
 ### Output Description
-In order to the final output specified by `-o` argument, there will be another two intermediate folders generated after running the pipeline: <br />
-  * `output_annot`: folder containing 50 output files from each annotation tool 
-   * `gff_all` : folder containing 50 gff output from each annotation tool
+In order to the final output specified by `-om` argument, there will be another two intermediate folders ,specified by `-oa` and `-og` arguments. So there will be a total of 3 output folders after executing the pipeline command.
 When blast path is executed, it will also generate a database folder:
   * `blast_operon_db`: database for DOOR2
   * `blast_vfdb_db`: database for vfdb
