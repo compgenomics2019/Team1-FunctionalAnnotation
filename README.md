@@ -17,7 +17,7 @@ If the perl path is different from your local computer, please change it to /usr
   * VFDBdb.fasta 
   
 **5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script <br /> 
-**6.** card-data: a database to run `card` annotation 
+**6.** card-data folder: a database to run `card` annotation 
 ### Quick start
 ~~~~
 Git clone https://github.gatech.edu/compgenomics2019/Team1-FunctionalAnnotation.git 
