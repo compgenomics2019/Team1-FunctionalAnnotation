@@ -15,7 +15,7 @@ If the perl path is different from your local computer, please change it to /usr
 **4.** These databases are also needed to be present in the current working directory, to run annotation for DOOR2 and VFDB:
   * operonDB.fasta
   * VFDBdb.fasta 
-  * card-data folder: a database to run `card` annotation 
+  * `card-data` folder: a database to run `card` annotation 
   
 **5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script <br /> 
 
