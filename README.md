@@ -27,7 +27,7 @@ If the perl path is different from your local computer, please change it to /usr
   
 **5.** `Utilities` folder, containing scripts to run with the FA_pipeline_final.py script <br /> 
 **6.** `cd-hit` tool is installed or added to executable path. `cd-hit` can be installed with conda using the command:
-  * `conda install -c bioconda cd-hit` or `conda install -c bioconda/label/cf201901 cd-hit`
+  * `conda install -c bioconda cd-hit` or `conda install -c bioconda/label/cf201901 cd-hit` <br /> 
    Or user can download the source code of `cd-hit` following the instruction in this website: https://github.com/weizhongli/cdhit/wiki/2.-Installation <br /> 
 
 ### Quick start
