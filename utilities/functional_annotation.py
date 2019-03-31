@@ -5,6 +5,7 @@ import argparse
 import subprocess
 import re
 def signalP_all50(inDir,outFolder):
+    print("annotating using SingalP")
     """ annotate 50 files """
     """ if os.path.exists(outFolder):
         subprocess.call(["rm","-dr",outFolder]) """
@@ -22,6 +23,7 @@ def signalP_all50(inDir,outFolder):
         if "_signalP.gff3" in f or "summary.signalp5" in f:
             subprocess.call(["mv",f,outFolder])
 def tmhmm_all50(inDir,outFolder):
+    print("annotating using TMHMM")
     """ annotate 50 files """
     """ if os.path.exists(outFolder):
         subprocess.call(["rm","-dr",outFolder]) """
@@ -35,6 +37,7 @@ def tmhmm_all50(inDir,outFolder):
             tmmCommand="tmhmm-2.0c/bin/tmhmm -short {} > {} ".format(f,outFile)
             subprocess.call(tmmCommand,shell=True)  
 def rgi_all50(inDir,outFolder):
+    print("annotating card")
     #annotat all 50 .faa files
     """ if os.path.exists(outFolder):
         subprocess.call(["rm","-dr",outFolder])
@@ -53,16 +56,12 @@ def rgi_all50(inDir,outFolder):
             subprocess.run(["rgi","load","-i",card,"--card_annotation",model,"--local"])
             subprocess.run(["rgi","main","-i",inFile,"-o",prefix,"--input_type",t,"--local"])
             allFiles=os.listdir(os.getcwd()) #list all files in the current working directory """
-            """ for f in allFiles:
-                temp=re.search(r".temp.",f)
-                if temp:
-                    os.remove(f) """
-    
-    
+      
     for f in os.listdir(outFolder):
         if ".xml" in f or ".json" in f:
             subprocess.call(["rm",os.path.join(outFolder,f)])
 def piler_all50(inDir,seqFolder,outFolder):
+    print("annotating using PIler")
     #annotate all 50 ASSEMBLY files
     """ if os.path.exists(outFolder):
         subprocess.call(["rm","-dr",outFolder])
