@@ -18,7 +18,7 @@ If the perl path is different from your local computer, please change it to /usr
   * pilercr1.06/pilercr
   * signalp-5.0/bin/signalp
   * ncbi-blast-2.8.1+/bin containing blasts, blasts, makeblastdb
-  * eggnog-mapper folder containing emapper.py. 
+  * `eggnog-mapper` folder containing emapper.py. 
   
 **4.** These databases are also needed to be present in the current working directory, to run annotation for DOOR2 and VFDB:
   * operonDB.fasta
