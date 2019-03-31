@@ -25,7 +25,7 @@ If the perl path is different from your local computer, please change it to /usr
   * VFDBdb.fasta 
   * `card-data` folder: a database to run `card` annotation 
   
-**5.** Utilities folder, containing scripts to run with the FA_pipeline_final.py script <br /> 
+**5.** `Utilities` folder, containing scripts to run with the FA_pipeline_final.py script <br /> 
 
 ### Quick start
 ~~~~
