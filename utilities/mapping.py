@@ -38,12 +38,12 @@ def get_cluster_files(clusterFolder,names_file,outDir):
     files=file.read() #read as one string
     x=files.split(">Cluster")
     alllist=open(names_file,"r") # open the "allfiles.txt"
-    #print(files)
-
+   
+    #print(x[:5])
     def main(input_samples):
         tmp=[]
         name_list=[]
-        for i in x[1:]:
+        for i in x[1:]: #dont look at the centroid sequence      
             y=i.split('\n')[1:]
             for i in y:
                 if i!='':
@@ -51,17 +51,20 @@ def get_cluster_files(clusterFolder,names_file,outDir):
                     zz=z.split('...')[0]
                     tmp.append(zz)
             name_list.append(tmp)
+            #print(name_list)
             tmp=[]
 
         output=[]
+        #print(name_list)
         for i in name_list:
-            for j in i[1:]:
+            #for j in i[1:]:
+            for j in i[:]:
                 if j.startswith('>%s'%(input_samples)):
                     output.append([i[0],j])
         #outfiles=open("%s.txt"%(input_samples),"w") # write output files looks like "1020.txt,1785.txt, ..."
         outfiles=open("{}/{}_cluster.txt".format(outDir,input_samples),"w")
         count=0
-        for i in output:
+        for i in output: #is is ['>1365:NODE_11_length_168224_cov_22.876340_82', '>1032:NODE_6_length_239963_cov_14.069204_76']            
             count+=1
             outfiles.write("#%s\n"%(count))
             for j in i:
@@ -88,7 +91,7 @@ def mapping_to_50files(eggNOG_Dir,outDir):
         x=">%s"%(line.split('\t')[0])
         y=line.split('\t')[1:]
         cluster.append([x,y])
-    #print(cluster[0])
+    #print(cluster)
     for f in os.listdir(eggNOG_Dir):
         if "_cluster.txt" in f:
             dict_in={}  #key is number of cluster, value is pair ['>1743:NODE_42_length_27761_cov_25.415575_1', '>1357:NODE_39_length_27683_cov_15.459828_12']
@@ -106,10 +109,11 @@ def mapping_to_50files(eggNOG_Dir,outDir):
                     dict_in[count]=dict_in[count]+[x]
             
             input_list=[]
+            #print(dict_in.values())
             for values in dict_in.values():
-                x=values[0].split(':')
+                """ x=values[0].split(':')
                 y=values[1].split(':')
-                """ if x[0]!=y[0]:
+                if x[0]!=y[0]:
                     input_list.append(values) """
                 input_list.append(values) #input_list contains list of list ['>1358:NODE_60_length_12023_cov_11.960478_3', '>1595:NODE_61_length_12023_cov_10.910762_2'], ['
             #print(input_list[:3])
@@ -132,10 +136,6 @@ def mapping_to_50files(eggNOG_Dir,outDir):
             outFileName=os.path.join(outDir,'{}_eggnog.txt'.format(f.split("_")[0]))
             outFile=open(outFileName,'w')
             for i in final_out:
-                """ if i.startswith(">"):
-                    outFile.write(i.split(":")[1])
-                else:
-                    outFile.write(i) """   #this will be removed in the merging script, so dont have to do this step
                 outFile.write(i)
     #print(dict_in[0])
 def main(faa_dir,names_file,title_file,mergeFile,eggNOG_Dir,clusterFolder,outMapDir):
@@ -153,6 +153,6 @@ def main(faa_dir,names_file,title_file,mergeFile,eggNOG_Dir,clusterFolder,outMap
 
     mapping_to_50files(eggNOG_Dir,outMapDir)
     title_file=os.path.join(outMapDir,title_file)
-    print(names_file,title_file)
+    #print(names_file,title_file)
     if not os.path.exists(title_file):
         getTitleFile(title_file, clusterFolder,mergeFile)
