@@ -30,11 +30,11 @@ If the perl path is different from your local computer, please change it to /usr
   * `conda install -c bioconda cd-hit` or `conda install -c bioconda/label/cf201901 cd-hit` <br /> 
    Or user can download the source code of `cd-hit` following the instruction in this website: https://github.com/weizhongli/cdhit/wiki/2.-Installation 
 
-**7.** `rgi` tool needs to be installed before running the pipeline. Users can install `rgi` source code at this website: https://github.com/arpcard/rgi. Or `rgi` can be installed using `conda`. For this pipeline, `rgi` version is 4.2.2. The command to install `rgi` is:<br /> 
-    * conda install -c conda-forge filetype
-    * conda install -c conda-forge pyahocorasick
-    * conda install -c conda-forge -c bioconda rgi=4.2.2
-    * conda install -c biocore blast-plus <br />
+**7.** `rgi` tool needs to be installed before running the pipeline. Users can install `rgi` source code at this website: https://github.com/arpcard/rgi. Or `rgi` can be installed using `conda`. For this pipeline, `rgi` version is 4.2.2. The command to install `rgi` is: <br /> 
+  * conda install -c conda-forge filetype
+  * conda install -c conda-forge pyahocorasick
+  * conda install -c conda-forge -c bioconda rgi=4.2.2
+  * conda install -c biocore blast-plus <br />
 
 ### Quick start
 ~~~~
