@@ -212,7 +212,8 @@ def eggNOG_to_gff(inDir,newDir):
             for i in title_starstop:
                 for j in sample_annot:
                     if i[0]==j[0]:
-                        sampleout.write("{}\teggnog\t{}\t{}\t{}\t.\t.\t.\t.\n".format(i[0].split(":")[1],j[-1],int(i[1]),int(i[2])))
+                        #sampleout.write("{}\teggnog\t{}\t{}\t{}\t.\t.\t.\t.\n".format(i[0].split(":")[1],j[-1],int(i[1]),int(i[2])))
+                        sampleout.write("{}\teggNOG\t{}\t{}\t{}\t.\t.\t.\t.\n".format(i[0].split(":")[1],int(i[1]),int(i[2]),j[-1]))
                     #break
                                       
 def main(tmhmm_dir,tmhmm_gff,singalP_dir,signalP_gff,door2_dir,door2_gff,vfdb_dir,vfdb_gff,card_dir,card_gff,piler_dir,piler_gff,eggNOG_dir,eggnog_gff,inFolder,outFolder):  
