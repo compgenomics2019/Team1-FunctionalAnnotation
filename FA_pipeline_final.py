@@ -76,6 +76,7 @@ def main():
     except Exception as e:
         print(e)
         sys.exit(-1)
+        
     """ after annotation all 50 files, then convert to gff for each annotation tool"""
     try:
         gff_out_folder=args.gffFolder #folder containing gff files for each annotation tool

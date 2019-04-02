@@ -57,8 +57,9 @@ def get_cluster_files(clusterFolder,names_file,outDir):
         output=[]
         #print(name_list)
         for i in name_list:
-            #for j in i[1:]:
-            for j in i[:]:
+            if i[0].startswith('>%s'%(input_samples)): # ADD
+                output.append([i[0],i[0]])                        #ADD
+            for j in i[1:]:
                 if j.startswith('>%s'%(input_samples)):
                     output.append([i[0],j])
         #outfiles=open("%s.txt"%(input_samples),"w") # write output files looks like "1020.txt,1785.txt, ..."
@@ -111,10 +112,6 @@ def mapping_to_50files(eggNOG_Dir,outDir):
             input_list=[]
             #print(dict_in.values())
             for values in dict_in.values():
-                """ x=values[0].split(':')
-                y=values[1].split(':')
-                if x[0]!=y[0]:
-                    input_list.append(values) """
                 input_list.append(values) #input_list contains list of list ['>1358:NODE_60_length_12023_cov_11.960478_3', '>1595:NODE_61_length_12023_cov_10.910762_2'], ['
             #print(input_list[:3])
             output=[] #list of list contains '>1365:NODE_1_length_430394_cov_23.539821_1', ['155864.Z5598', '3e-97', '316.2', 'YJAB', '', 'K03827', '', 'bactNOG[38]', '05K5X@bactNOG,0QQJ2@gproNOG,17CRJ@proNOG,COG0454@NOG', '05K5X|5.33513221566e-63|216.752120972', 'K', 'acetyltransferase\n']]
